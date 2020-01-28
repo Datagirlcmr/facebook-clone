@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'Create a user without birth date' do
-      user = User.new(name: 'Test', birth_date: nil, gender: 'Male', email: 'mail@mail.com', 
+      user = User.new(name: 'Test', birth_date: nil, gender: 'Male', email: 'mail@mail.com',
                       encrypted_password: 'pass123', password: 'pass123')
       expect(user).not_to be_valid
     end
