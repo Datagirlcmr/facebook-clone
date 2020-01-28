@@ -8,15 +8,15 @@ RSpec.describe Post, type: :model do
     end
 
     it 'Create a post without content' do
-      user = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com', 
-                          encrypted_password: 'pass123', password: 'pass123')
-      post = user.posts.build(content: "")
+      user = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com',
+                         encrypted_password: 'pass123', password: 'pass123')
+      post = user.posts.build(content: '')
       expect(post).not_to be_valid
     end
 
     it 'Create a valid post with content and author' do
-      user = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com', 
-                                encrypted_password: 'pass123', password: 'pass123')
+      user = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com',
+                         encrypted_password: 'pass123', password: 'pass123')
       post = user.posts.build(content: 'Content123')
       expect(post).to be_valid
     end
