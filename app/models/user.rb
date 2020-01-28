@@ -4,9 +4,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :gender, presence: true
   validates :birth_date, presence: true
-  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :posts, foreign_key: "author_id"
-
+  has_many :posts, foreign_key: 'author_id'
 end
