@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :likes
+  resources :comments
   devise_for :users
   resources :posts
   root to: "posts#index"
