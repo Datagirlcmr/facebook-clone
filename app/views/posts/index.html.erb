@@ -1,18 +1,21 @@
 <%= link_to "Create new post", new_post_path %> <br>
 <% @posts.each do |post|%>
-    <%= post.content%> by: 
-    <%= post.author.name%> 
-    <%= button_to 'Like', likes_path, method: :post, params:{post_id: post.id}%> 
+  <%= post.content%> by: 
+  <%= post.author.name%> 
+  <%= button_to 'Like', likes_path, method: :post, params:{post_id: post.id}%> 
+  <span class='like-count'> 
     <%= pluralize(post.likes.count, 'like')%>
-
-    <% post.comments.each do |comment|%>
+  </span>
+  <% post.comments.each do |comment|%>
+  <span class="comment-area">
     <%= comment.author.name%> : <%= comment.content%> <br>
-    <% end %>
+  </span>
+  <% end %>
 <%# <%= link_to 'New Comment', new_comment_path(post), method: :get %>
-    <%= form_for @comment do |f|%>
-    <%= f.label :comment%>
-    <%= f.text_area :content%>
-    <%= f.hidden_field :post_id, value: post.id  %>
-    <%= f.submit 'comment'%>
-    <% end %> <br>
+  <%= form_for @comment do |f|%>
+  <%= f.label :comment%>
+  <%= f.text_area :content%>
+  <%= f.hidden_field :post_id, value: post.id  %>
+  <%= f.submit 'comment'%>
+  <% end %> <br>
 <% end %>
