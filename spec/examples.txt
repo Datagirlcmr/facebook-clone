@@ -1,0 +1,20 @@
+example_id                                       | status | run_time        |
+------------------------------------------------ | ------ | --------------- |
+./spec/comments_unit_test_spec.rb[1:1:1]         | passed | 0.00147 seconds |
+./spec/comments_unit_test_spec.rb[1:1:2]         | passed | 0.00627 seconds |
+./spec/comments_unit_test_spec.rb[1:1:3]         | passed | 0.00743 seconds |
+./spec/comments_unit_test_spec.rb[1:1:4]         | passed | 0.00931 seconds |
+./spec/likes_unit_test_spec.rb[1:1:1]            | passed | 0.00743 seconds |
+./spec/likes_unit_test_spec.rb[1:1:2]            | passed | 0.04257 seconds |
+./spec/likes_unit_test_spec.rb[1:1:3]            | passed | 0.02174 seconds |
+./spec/post_unit_test_spec.rb[1:1:1]             | passed | 0.00175 seconds |
+./spec/post_unit_test_spec.rb[1:1:2]             | passed | 0.00518 seconds |
+./spec/post_unit_test_spec.rb[1:1:3]             | passed | 0.00502 seconds |
+./spec/user_signin_integration_test_spec.rb[1:1] | passed | 0.07139 seconds |
+./spec/user_signin_integration_test_spec.rb[1:2] | passed | 0.0494 seconds  |
+./spec/user_signup_integration_test_spec.rb[1:1] | passed | 0.07115 seconds |
+./spec/user_signup_integration_test_spec.rb[1:2] | passed | 0.31163 seconds |
+./spec/user_unit_test_spec.rb[1:1:1]             | passed | 0.00315 seconds |
+./spec/user_unit_test_spec.rb[1:1:2]             | passed | 0.00276 seconds |
+./spec/user_unit_test_spec.rb[1:1:3]             | passed | 0.00341 seconds |
+./spec/user_unit_test_spec.rb[1:1:4]             | passed | 0.00236 seconds |
