@@ -8,7 +8,7 @@ RSpec.describe 'User signin', type: :feature do
     fill_in 'Email', with: 'mail@mail.com'
     fill_in 'Password', with: 'Pass123'
     click_button 'Log in'
-    expect(page).to have_content('test')
+    expect(page).to have_content('Logout')
   end
 
   scenario 'With invalid signin data' do

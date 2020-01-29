@@ -10,7 +10,7 @@ RSpec.describe 'User signup', type: :feature do
     fill_in 'Password', with: 'Pass123'
     fill_in 'Password confirmation', with: 'Pass123'
     click_button 'Sign up'
-    expect(page).to have_content('test')
+    expect(page).to have_content('Logout')
   end
 
   scenario 'With invalid signup data' do
