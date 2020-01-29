@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    post = Post.find_by(id: params[:comment][:post_id]) 
+    post = Post.find_by(id: params[:comment][:post_id])
     comment = post.comments.build(author_id: current_user.id,
                                   content: params[:comment][:content])
     if comment.save
@@ -14,6 +14,5 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-  end
+  def destroy; end
 end
