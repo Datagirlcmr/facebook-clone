@@ -9,14 +9,14 @@ RSpec.describe Comment, type: :model do
 
     it 'Create a comment without content, and post' do
       user = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com',
-                          encrypted_password: 'pass123', password: 'pass123')
+                         encrypted_password: 'pass123', password: 'pass123')
       comment = user.comments.build(content: '')
       expect(comment).not_to be_valid
     end
 
     it 'Create a comment without content, and author' do
       user = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com',
-                          encrypted_password: 'pass123', password: 'pass123')
+                         encrypted_password: 'pass123', password: 'pass123')
       post = user.posts.create(content: 'content101')
       comment = post.comments.build(content: '')
       expect(comment).not_to be_valid
