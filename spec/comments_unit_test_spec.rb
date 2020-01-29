@@ -24,7 +24,7 @@ RSpec.describe Comment, type: :model do
 
     it 'Create a valid comment with content, post and author' do
       user = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com',
-                          encrypted_password: 'pass123', password: 'pass123')
+                         encrypted_password: 'pass123', password: 'pass123')
       post = user.posts.create(content: 'content101')
       comment = post.comments.build(content: 'content101', author_id: user.id)
       expect(comment).to be_valid
