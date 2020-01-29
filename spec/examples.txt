@@ -1,0 +1,30 @@
+example_id                                            | status  | run_time        |
+----------------------------------------------------- | ------- | --------------- |
+./spec/controllers/comments_controller_spec.rb[1:1:1] | passed  | 0.00839 seconds |
+./spec/controllers/comments_controller_spec.rb[1:2:1] | failed  | 0.0022 seconds  |
+./spec/controllers/comments_controller_spec.rb[1:3:1] | failed  | 0.00119 seconds |
+./spec/controllers/likes_controller_spec.rb[1:1:1]    | passed  | 0.01676 seconds |
+./spec/controllers/likes_controller_spec.rb[1:2:1]    | failed  | 0.02775 seconds |
+./spec/controllers/likes_controller_spec.rb[1:3:1]    | failed  | 0.01359 seconds |
+./spec/helpers/comments_helper_spec.rb[1:1]           | pending | 0.00001 seconds |
+./spec/helpers/likes_helper_spec.rb[1:1]              | pending | 0.00001 seconds |
+./spec/helpers/users_helper_spec.rb[1:1]              | pending | 0.00001 seconds |
+./spec/models/comment_spec.rb[1:1]                    | pending | 0 seconds       |
+./spec/models/like_spec.rb[1:1]                       | pending | 0 seconds       |
+./spec/post_unit_test_spec.rb[1:1:1]                  | passed  | 0.00152 seconds |
+./spec/post_unit_test_spec.rb[1:1:2]                  | passed  | 0.00643 seconds |
+./spec/post_unit_test_spec.rb[1:1:3]                  | passed  | 0.03363 seconds |
+./spec/user_signin_integration_test_spec.rb[1:1]      | failed  | 0.05176 seconds |
+./spec/user_signin_integration_test_spec.rb[1:2]      | passed  | 0.08345 seconds |
+./spec/user_signup_integration_test_spec.rb[1:1]      | failed  | 0.10149 seconds |
+./spec/user_signup_integration_test_spec.rb[1:2]      | passed  | 0.48307 seconds |
+./spec/user_unit_test_spec.rb[1:1:1]                  | passed  | 0.00323 seconds |
+./spec/user_unit_test_spec.rb[1:1:2]                  | passed  | 0.0589 seconds  |
+./spec/user_unit_test_spec.rb[1:1:3]                  | passed  | 0.00278 seconds |
+./spec/user_unit_test_spec.rb[1:1:4]                  | passed  | 0.0031 seconds  |
+./spec/views/comments/create.html.erb_spec.rb[1:1]    | pending | 0 seconds       |
+./spec/views/comments/destroy.html.erb_spec.rb[1:1]   | pending | 0 seconds       |
+./spec/views/comments/new.html.erb_spec.rb[1:1]       | pending | 0.00001 seconds |
+./spec/views/likes/create.html.erb_spec.rb[1:1]       | pending | 0 seconds       |
+./spec/views/likes/destroy.html.erb_spec.rb[1:1]      | pending | 0.00001 seconds |
+./spec/views/likes/new.html.erb_spec.rb[1:1]          | pending | 0.00001 seconds |
