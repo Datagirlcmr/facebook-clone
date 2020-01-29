@@ -16,12 +16,13 @@ class PostsController < ApplicationController
     if post.save
       redirect_to posts_path
     else
-      render 'new' 
+      render 'new'
     end
   end
 
   private
-    def post_params
-      params.require(:post).permit(:content)
-    end
+
+  def post_params
+    params.require(:post).permit(:content)
+  end
 end

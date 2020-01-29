@@ -1,0 +1,6 @@
+<%= @user.name %> <br>
+Posts: <br>
+<% @user.posts.each do |post| %>
+  <%= post.content %> <br>
+  <%= post.created_at %> <br>
+<% end %>
