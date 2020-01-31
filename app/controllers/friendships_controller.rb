@@ -1,7 +1,7 @@
 class FriendshipsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @friendship_requests = current_user.requests
+    @friendship_requests = current_user.received_requests
     @friends = current_user.friends
   end
 
@@ -13,6 +13,7 @@ class FriendshipsController < ApplicationController
   def update
     friendship = Friendship.find_by(id: params[:id])
     friendship&.update_attribute(:status, true)
+    current_user.friendships.create(friend: friendship.user, status: true)
     redirect_to friendships_path
   end
 end
