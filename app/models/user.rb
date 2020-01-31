@@ -42,7 +42,7 @@ class User < ApplicationRecord
     friends
   end
 
-  def is_friend?(user)
+  def friend?(user)
     friends.include?(user)
   end
 

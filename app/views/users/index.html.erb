@@ -1,6 +1,6 @@
 <% @users.each do |user| %>
   <%= link_to user.name, user_path(user.id) %> 
-  <% if !current_user.is_friend?(user) && !current_user.request_sent?(user) && user != current_user %>
+  <% if !current_user.friend?(user) && !current_user.request_sent?(user) && user != current_user %>
     <%= link_to 'Add friend', friendships_path(friend_id: user.id), method: :post %>
   <% end %>
   <br>

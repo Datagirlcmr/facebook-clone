@@ -6,15 +6,13 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    friendship = current_user.friendships.create(friend_id: params[:friend_id], status: false)
+    current_user.friendships.create(friend_id: params[:friend_id], status: false)
     redirect_to users_path
   end
 
   def update
     friendship = Friendship.find_by(id: params[:id])
-    if friendship
-      friendship.update_attributes(:status => true)
-    end
+    friendship.update_attribute(:status, true) if friendship
     redirect_to friendships_path
   end
 end

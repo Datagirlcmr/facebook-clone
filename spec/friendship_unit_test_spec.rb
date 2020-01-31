@@ -14,9 +14,9 @@ RSpec.describe Friendship, type: :model do
 
     it 'Create a valid friendship' do
       user1 = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test@mail.com',
-                         encrypted_password: 'pass123', password: 'pass123')
+                          encrypted_password: 'pass123', password: 'pass123')
       user2 = User.create(name: 'Test', birth_date: DateTime.now, gender: 'Female', email: 'test2@mail.com',
-        encrypted_password: 'pass123', password: 'pass123')
+                          encrypted_password: 'pass123', password: 'pass123')
       friendship = user1.friendships.build(friend: user2)
       expect(friendship).to be_valid
     end
