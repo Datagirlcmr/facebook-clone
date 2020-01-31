@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Comments', type: :feature do
   scenario 'Comment a post' do
-    test_user_signup
+    test_user_signup('1')
     test_post_create
     fill_in 'comment_content', with: 'comment123'
     click_button 'comment'
