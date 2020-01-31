@@ -13,8 +13,7 @@ class User < ApplicationRecord
   has_many :accepted_friendships, -> { accepted }, class_name: 'Friendship'
   has_many :unaccepted_friendships, -> { unaccepted }, class_name: 'Friendship'
   has_many :friends, through: :accepted_friendships
-  has_many :received_requests,  -> { unaccepted }, foreign_key: :friend_id,
-           class_name: 'Friendship'
+  has_many :received_requests, -> { unaccepted }, foreign_key: :friend_id, class_name: 'Friendship'
   has_many :received_requests_users, through: :received_requests, source: :user
   has_many :sent_requests, through: :unaccepted_friendships, source: :friend
 
