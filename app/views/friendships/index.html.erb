@@ -1,0 +1,9 @@
+Friendships requests: <br>
+<% @friendship_requests.each do |request| %>
+  <%= link_to request.user.name, users_path(request.user) %> <%= link_to 'Accept friend', friendship_path(request.id), method: :patch %> <br>
+<% end %>
+<br>
+Friends: <br>
+<% @friends.each do |friend| %>
+  <%= link_to friend.name, users_path(friend) %> <br>
+<% end %>
