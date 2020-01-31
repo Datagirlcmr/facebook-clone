@@ -12,7 +12,7 @@ class FriendshipsController < ApplicationController
 
   def update
     friendship = Friendship.find_by(id: params[:id])
-    friendship.update_attribute(:status, true) if friendship
+    friendship&.update_attribute(:status, true)
     redirect_to friendships_path
   end
 end
