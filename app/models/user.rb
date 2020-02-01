@@ -10,43 +10,18 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: 'author_id'
   has_many :comments, foreign_key: 'author_id'
   has_many :friendships
-  has_many :inverse_friendships, foreign_key: 'friend_id', class_name: 'Friendship'
-
-  def friends
-    friends = []
-    friendships.each do |friendship|
-      friends.push(friendship.friend) if friendship.status
-    end
-    inverse_friendships.each do |friendship|
-      friends.push(friendship.user) if friendship.status
-    end
-    friends
-  end
-
-  def requests
-    requests = []
-    inverse_friendships.each do |friendship|
-      requests.push(friendship) unless friendship.status
-    end
-    requests
-  end
-
-  def requesters
-    friends = []
-    friendships.each do |friendship|
-      friends.push(friendship.friend) unless friendship.status
-    end
-    inverse_friendships.each do |friendship|
-      friends.push(friendship.user) unless friendship.status
-    end
-    friends
-  end
+  has_many :accepted_friendships, -> { accepted }, class_name: 'Friendship'
+  has_many :unaccepted_friendships, -> { unaccepted }, class_name: 'Friendship'
+  has_many :friends, through: :accepted_friendships
+  has_many :received_requests, -> { unaccepted }, foreign_key: :friend_id, class_name: 'Friendship'
+  has_many :received_requests_users, through: :received_requests, source: :user
+  has_many :sent_requests, through: :unaccepted_friendships, source: :friend
 
   def friend?(user)
     friends.include?(user)
   end
 
   def request_sent?(user)
-    requesters.include?(user)
+    (received_requests_users + sent_requests).include?(user)
   end
 end
