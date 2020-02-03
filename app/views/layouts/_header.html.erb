@@ -1,0 +1,41 @@
+<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsable">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/home" class="navbar-brand">My great app</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapsable">
+      <ul class="nav navbar-nav foo" id="menu">
+        <p class="navbar-text">Pick an option:</p>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/about-us">About Us</a></li>
+        <li>
+          <a href="/contact">
+            <span class='glyphicon glyphicon-hand-right'></span>
+            Contact Us!
+          </a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stuff <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Great stuff!</li>
+            <li><a href="/one">One</a></li>
+            <li><a href="/two">Two</a></li>
+            <li><a href="/three">Three</a></li>
+            <li class="divider"></li>
+            <li><a href="/admin">Admin Dashboard</a></li>
+            <li><a href="/admin/users">Users</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" align="right">
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
