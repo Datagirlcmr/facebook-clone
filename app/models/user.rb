@@ -29,7 +29,7 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     user = find_by(email: auth.info.email)
     user || User.create(name: auth.info.name, password: Devise.friendly_token[0, 20],
-                         email: auth.info.email, birth_date: DateTime.now, gender: 'non-binary')
+                        email: auth.info.email, birth_date: DateTime.now, gender: 'non-binary')
   end
 
   def self.new_with_session(params, session)
