@@ -31,12 +31,4 @@ class User < ApplicationRecord
     user || User.create(name: auth.info.name, password: Devise.friendly_token[0, 20],
                         email: auth.info.email, birth_date: DateTime.now, gender: 'non-binary')
   end
-
-  def self.new_with_session(params, session)
-    super.tap do |user|
-      if data == session['devise.facebook_data'] && session['devise.facebook_data']['extra']['raw_info']
-        user.email = data['email'] if user.email.blank?
-      end
-    end
-  end
 end
