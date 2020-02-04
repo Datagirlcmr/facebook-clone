@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :omniauthable, omniauth_providers: %i[facebook]
   validates :name, presence: true
   validates :gender, presence: true
   validates :birth_date, presence: true
@@ -23,5 +24,11 @@ class User < ApplicationRecord
 
   def request_sent?(user)
     (received_requests_users + sent_requests).include?(user)
+  end
+
+  def self.from_omniauth(auth)
+    user = find_by(email: auth.info.email)
+    user || User.create(name: auth.info.name, password: Devise.friendly_token[0, 20],
+                        email: auth.info.email, birth_date: DateTime.now, gender: 'non-binary')
   end
 end

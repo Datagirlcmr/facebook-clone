@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Facebook Clone
 
 >  An attempt to replicate the logic behind Facebook
@@ -25,6 +26,36 @@ The objetive of this project is build a replica that uses all the core logic of 
 
 [Live Demo Link](https://afternoon-mesa-55417.herokuapp.com)
 
+=======
+
+# Facebook Clone
+
+>  An attempt to replicate the logic behind Facebook
+
+<!-- ![screenshot](./docs/image.png) -->
+
+The objetive of this project is build a replica that uses all the core logic of Facebook.
+
+## Features
+
+- Sign in to the app using Facebook acccount
+- Send and receive friends Requests
+- View posts from accepted friends
+- Edit your profile
+
+
+## Built With
+
+- Ruby language,
+- Ruby on Rails framework,
+- Vscode for coding
+- Rubocop for Validation
+
+## Live Demo
+
+[Live Demo Link](https://afternoon-mesa-55417.herokuapp.com)
+
+>>>>>>> 2595c22090286e26ed49b672ed7f3e280ec86b9d
 
 # Gems
 - devise
