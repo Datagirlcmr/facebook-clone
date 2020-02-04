@@ -9,6 +9,7 @@
   </head>
 
   <body>
+  <%= render 'layouts/header'%>
     <p class="navbar-text float-right">
       <% if user_signed_in? %>
         <%= link_to 'Timeline', posts_path %>
