@@ -10,15 +10,7 @@
 
   <body>
   <%= render 'layouts/header'%>
-    <p class="navbar-text float-right">
-      <% if user_signed_in? %>
-        <%= link_to 'Timeline', posts_path %>
-        <%= link_to 'My Profile', user_path(current_user.id)%>
-        <%= link_to pluralize(current_user.received_requests.length, 'Friend Request'), friendships_path %>
-        <%= link_to 'Find Users', users_path %>
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-      <% end %>
-    </p>
+    
     <%= yield %>
 
   </body>

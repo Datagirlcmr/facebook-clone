@@ -2,7 +2,7 @@
 <% @posts.each do |post|%>
   <%= post.content%> by: 
   <%= post.author.name%> 
-  <%= button_to 'Like', likes_path, method: :post, params:{post_id: post.id}%> 
+  <%= button_to 'Like', likes_path, method: :post, params:{post_id: post.id}, class: "btn btn-success"%> 
   <span class='like-count'> 
     <%= pluralize(post.likes.count, 'like')%>
   </span>
@@ -11,11 +11,11 @@
     <%= comment.author.name%> : <%= comment.content%> <br>
   </span>
   <% end %>
-<%# <%= link_to 'New Comment', new_comment_path(post), method: :get %>
+  
   <%= form_for @comment do |f|%>
   <%= f.label :comment%>
   <%= f.text_area :content%>
   <%= f.hidden_field :post_id, value: post.id  %>
-  <%= f.submit 'comment'%>
+  <%= f.submit 'comment', class: "btn btn-success"%>
   <% end %> <br>
 <% end %>
