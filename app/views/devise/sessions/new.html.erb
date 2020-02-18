@@ -1,7 +1,16 @@
-<h2 class="col-md-6 col-md-offset-3">Log in</h2>
+
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 m-auto jumbotron">
+    <h1 class="text-center"> Welcome To FriendApp </h1>
+    <p class="text-center"> It's all fun here.. </p>
+  </div>
+
+  <div class="col-md-1"> 
+  </div>
+
+  <div class=" jumbotron col-md-5 m-auto">
+  <h2 class="text-center">Log in</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
@@ -24,7 +33,7 @@
         <%= f.submit "Log in", class: 'btn btn-primary' %>
       </div>
     <% end %>
+    <%= render "devise/shared/links" %>
   </div>
 </div>
-<br>
-<%= render "devise/shared/links" %>
+
