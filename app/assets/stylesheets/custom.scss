@@ -24,13 +24,18 @@
 
 body {
   padding: 70px;
+  background-color: rgb(211, 209, 209);
 }
 
-h2{
+h1 {
   color: #337ab7;
 }
 
-.navbar a{
+h2 {
+  color: #337ab7;
+}
+
+.navbar a {
   color: #fff;
   font-size: x-large;
   display: flex;
@@ -38,6 +43,6 @@ h2{
   justify-content: space-evenly;
 }
 
-.navbar a:hover{
+.navbar a:hover {
   color: #222;
 }

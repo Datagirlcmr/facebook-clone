@@ -1,15 +1,16 @@
 <div class="col-md-6 col-md-offset-3">
   <%- if controller_name != 'sessions' %>
-    <%= link_to "Log in", new_session_path(resource_name) %><br />
+    <%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-warning' %><br />
   <% end %>
-
+ 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
     <%= link_to "Sign up", new_registration_path(resource_name) %><br />
   <% end %>
+  <br>
 
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+      <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), class: 'btn btn-primary' %><br />
     <% end %>
   <% end %>
 

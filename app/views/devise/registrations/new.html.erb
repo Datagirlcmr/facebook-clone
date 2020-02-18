@@ -1,7 +1,16 @@
-<h2 class="col-md-6 col-md-offset-3">Sign up</h2>
-
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 m-auto jumbotron">
+    <h1 class="text-center"> Welcome To FriendApp </h1>
+    <p class="text-center"> It's all fun here.. </p>
+  </div>
+
+  <div class="col-md-1"> 
+  </div>
+
+
+  <div class=" jumbotron col-md-5 m-auto">
+    <h2 class="text-center">Create a New Account</h2>
+    <p class="text-center">It's fast and Easy</p>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -48,7 +57,9 @@
         <%= f.submit "Sign up", class: 'btn btn-primary'%>
       </div>
     <% end %>
+    <br>
+    <p class="text-center"> if you already have an account: </p>
+    <%= render "devise/shared/links" %>
   </div> 
 </div>
 
-<%= render "devise/shared/links" %>
