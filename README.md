@@ -23,8 +23,10 @@ This project is a Facebook-like social network application. In this project, use
 ## Data Architecture Documentation (ERD)
 
 The image below is a copy of the Entity Relationship Diagram generated for this project.
+<p align="center">
+    <img src="./docs/Database associations.png" alt="ERD">
+ </p>
 
-![ERD](./docs/Database associations.png)
 
 ## Built With
 
