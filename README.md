@@ -1,18 +1,22 @@
 <<<<<<< HEAD
 # Facebook Clone
 
->  An attempt to replicate the logic behind Facebook
-
+>  This project is a Facebook-like social network application built with rails. It implements the basic functionality found on the popular social media app called Facebook.
 <!-- ![screenshot](./docs/image.png) -->
 
 The objetive of this project is build a replica that uses all the core logic of Facebook.
 
+## About the Project
+
+This project is a Facebook-like social network application. In this project, users can sign up either through the app or with their facebook account. Once a user becomes a member, such user can be able to create posts and comments on other posts and in which only his/her friends can see and view. A user can also be able to post images too. A user can friend or unfriend a user. The main goal is to put in practice the main concepts of Model Associations, Session Authentications with devise gem, and units & integration testing with RSpec and Capybara.
+
 ## Features
 
-- Sign in to the app using Facebook acccount
-- Send and receive friends Requests
-- View posts from accepted friends
-- Edit your profile
+- Users can signup and send friend requests to other users.
+- Posts are created by users and only a user's friend can view or see them.
+- User can comment can on his/her post or on other users post.
+- Users can like posts and comments.
+- Users can search for other users with the search input by their names.
 
 
 ## Built With
@@ -27,22 +31,6 @@ The objetive of this project is build a replica that uses all the core logic of 
 [Live Demo Link](https://afternoon-mesa-55417.herokuapp.com)
 
 =======
-
-# Facebook Clone
-
->  An attempt to replicate the logic behind Facebook
-
-<!-- ![screenshot](./docs/image.png) -->
-
-The objetive of this project is build a replica that uses all the core logic of Facebook.
-
-## Features
-
-- Sign in to the app using Facebook acccount
-- Send and receive friends Requests
-- View posts from accepted friends
-- Edit your profile
-
 
 ## Built With
 
