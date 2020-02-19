@@ -24,7 +24,7 @@ This project is a Facebook-like social network application. In this project, use
 
 The image below is a copy of the Entity Relationship Diagram generated for this project.
 
-![screenshot](./docs/Database associations.png)
+![ERD](./docs/Database associations.png)
 
 ## Built With
 
