@@ -18,6 +18,11 @@ This project is a Facebook-like social network application. In this project, use
 - Users can like posts and comments.
 - Users can search for other users with the search input by their names.
 
+## Data Architecture Documentation (ERD)
+
+The image below is a copy of the Entity Relationship Diagram generated for this project.
+
+[screenshot](./docs/OBaVg52wtTZ.png)
 
 ## Built With
 
