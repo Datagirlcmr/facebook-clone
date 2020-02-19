@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Facebook Clone
 
 >  This project is a Facebook-like social network application built with rails. It implements the basic functionality found on the popular social media app called Facebook.
@@ -31,19 +31,6 @@ This project is a Facebook-like social network application. In this project, use
 [Live Demo Link](https://afternoon-mesa-55417.herokuapp.com)
 
 =======
-
-## Built With
-
-- Ruby language,
-- Ruby on Rails framework,
-- Vscode for coding
-- Rubocop for Validation
-
-## Live Demo
-
-[Live Demo Link](https://afternoon-mesa-55417.herokuapp.com)
-
->>>>>>> 2595c22090286e26ed49b672ed7f3e280ec86b9d
 
 # Gems
 - devise
