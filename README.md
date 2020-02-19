@@ -4,7 +4,9 @@
 >  This project is a Facebook-like social network application built with rails. It implements the basic functionality found on the popular social media app called Facebook.
 <!-- ![screenshot](./docs/image.png) -->
 
-The objetive of this project is build a replica that uses all the core logic of Facebook.
+The objetive of this project is build a replica that uses​
+25
+![screenshot](./docs/Database associations.png) all the core logic of Facebook.
 
 ## About the Project
 
