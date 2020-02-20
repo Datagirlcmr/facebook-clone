@@ -5,5 +5,6 @@ Friendships requests: <br>
 <br>
 Friends: <br>
 <% @friends.each do |friend| %>
+  <%= gravatar_for friend %> 
   <%= link_to friend.name, users_path(friend) %> <br>
 <% end %>

@@ -1,21 +1,42 @@
-<%= link_to "Whats on your mind", new_post_path %> <br>
-<% @posts.each do |post|%>
-  <%= post.content%> by: 
-  <%= post.author.name%> 
-  <%= button_to 'Like', likes_path, method: :post, params:{post_id: post.id}, class: "btn btn-success"%> 
-  <span class='like-count'> 
-    <%= pluralize(post.likes.count, 'like')%>
-  </span>
-  <% post.comments.each do |comment|%>
-  <span class="comment-area">
-    <%= comment.author.name%> : <%= comment.content%> <br>
-  </span>
-  <% end %>
-  
-  <%= form_for @comment do |f|%>
-  <%= f.label :comment%>
-  <%= f.text_area :content%>
-  <%= f.hidden_field :post_id, value: post.id  %>
-  <%= f.submit 'comment', class: "btn btn-success"%>
-  <% end %> <br>
-<% end %>
+<div class="row m-auto">
+  <div class="col-md-3"> </div>
+  <div class= "jumbotron col-md-5"> 
+    <% if current_user %>
+    <%= link_to "Whats on your mind, #{current_user.name} ?", new_post_path %>
+    <% end %>
+  </div>
+  <div class="col-md-3"> </div>
+</div> 
+
+<div class="m-auto">
+  <div class="col-md-3"> </div>
+  <div class=" jumbotron col-md-5">
+    <% @posts.each do |post|%>
+      <%= gravatar_for post.author %> 
+      <%= post.author.name%> <br> <br>
+      <%= post.content%>
+
+      <div>
+        <%= button_to 'Like', likes_path, method: :post, params:{post_id: post.id}, class: "btn btn-success"%> 
+        <span class='like-count'> 
+          <%= pluralize(post.likes.count, 'like')%>
+        </span>
+      </div>
+
+      <div>  
+        <%= form_for @comment do |f|%>
+          <%= f.text_area :content%>
+          <%= f.hidden_field :post_id, value: post.id  %>
+          <%= f.submit 'comment', class: "btn btn-success"%>
+        <% end %> <br>
+
+        <% post.comments.each do |comment|%>
+          <span class="comment-area">
+            <%= comment.author.name%> : <%= comment.content%> <br>
+          </span>
+        <% end %> 
+      <% end %>
+      </div>
+    </div>
+  <div class="col-md-3"> </div>
+</div>
