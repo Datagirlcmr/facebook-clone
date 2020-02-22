@@ -1,0 +1,17 @@
+<header class="navbar navbar-fixed-top navbar-inverse header">
+  <div class="container">
+    <%= link_to "FriendApp", root_path, id: "logo" %></li>
+      <nav>
+        <ul class= "nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li> <%= link_to 'Timeline', posts_path%> </li>
+              <li> <%= link_to 'My Profile', user_path(current_user.id)%> </li>
+              <li> <%= link_to pluralize(current_user.received_requests.length, 'Friend Request'), friendships_path %> </li>
+              <li> <%= link_to 'Find Users', users_path%> </li>
+              <li> <%= link_to 'Logout', destroy_user_session_path, method: :delete %> </li>
+            <% end %>
+        </ul>
+      </nav>
+  </div>
+</header>
+  
